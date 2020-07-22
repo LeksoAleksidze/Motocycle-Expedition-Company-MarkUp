@@ -1,0 +1,901 @@
+
+*
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+html,body
+{
+	overflow-x: hidden;
+	background-color: #ededed!important;
+	scroll-behavior: smooth;
+}
+
+a:focus
+{
+	outline: none;
+}
+span
+{
+	color: #cd0a2d;
+}
+
+/* ---------------------- START HEADER ----------------------  */
+header
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 9999;
+	margin:auto;
+	padding: 10px;
+}
+header .navbar-brand
+{
+	z-index: 999999!important;
+	display: block;
+}
+header .navbar-brand h1
+{
+	font-size: 33PX;
+	color: #fff;
+	font-weight: 700;
+	display: block;
+}
+header .navbar-brand p
+{
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+	margin-top: -10px;
+	letter-spacing: 5px;
+	font-family: 'Montserrat', sans-serif;
+}
+nav .navbar-nav .nav-item .nav-link
+{
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	transition: all .5s;
+	position: relative;
+}
+nav .navbar-nav .nav-item .nav-link::after
+{
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 2px;
+	background-color: #fff;
+	transition: all .3s linear;
+}
+nav .navbar-nav .nav-item .nav-link:hover::after
+{
+	left: 0;
+	width: 50%;
+}
+nav .navbar-nav .nav-item .nav-link:hover
+{
+	color: #34495e;
+}
+nav .fa
+{
+	position: absolute;
+	right: 4px;
+	top: 0px;
+	color: #000;
+	font-size: 35px;
+	z-index: 999999;
+	text-align: center;
+}
+nav .navbar-toggler
+{
+	background-color: #fff;
+	color: #fff;
+	z-index: 99999;
+	height: 40px;
+	width: 40px;
+	position: fixed;
+	top: 25px;
+	right: 25px;
+}
+
+
+
+
+/* ---------------------- END  HEADER ----------------------  */
+
+/* ---------------------- START HOME ----------------------  */
+#home
+{
+	background-image: url(../images/background.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -170px;
+	min-height: 100vh;
+	position: relative;
+	background-color: #fff;
+}
+#home::after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-bottom: 100vh solid transparent;
+	border-right: 900px solid #cd0a2d;
+}
+#home .hero
+{
+	min-height: 100vh;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 99;
+}
+#home .hero h1
+{
+	  font-family: 'Billy-Ohio';
+	  font-size: 80px;
+	  font-weight: 700;
+	  word-spacing: 4px;
+	  letter-spacing: 5px;
+	  color: #fff;
+	  display: block;
+	  z-index: 99;
+}
+/* ---------------------- END HOME ----------------------  */
+
+/* ---------------------- START  TOUR ----------------------  */
+#tour
+{
+	padding: 50px 15px;
+	padding-top: 0;
+	padding-bottom: 120px;
+	background-color: #ededed;
+}
+ .inner
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-left: 15px;
+}
+ .inner .img
+{
+	max-width: 350px;
+	max-height: 350px;
+	position: relative;
+}
+.inner .img img
+{
+	width: 100%;
+	display: block;
+}
+ .inner .info
+{
+	max-width: 350px;
+}
+ .inner .img .price
+{
+	position: absolute;
+	left: -15px;
+	bottom: -15px;
+	width: 180px;
+	height: 180px;
+	background-image: url(../images/red.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+}
+ .inner .img .price h1
+{
+	position: absolute;
+	left: 15px;
+	bottom: 29px;
+	color: #fff;
+	font-size: 75px;
+	font-weight: 600;
+}
+.inner .img .price span
+{
+	color: #fff;
+	font-size: 45px;
+}
+ .inner .img .price p
+{
+	position: absolute;
+	left: 20px;
+	bottom: 0px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	max-width: 330px;
+}
+ .inner .info h1
+{
+	font-family: 'Rajdhani', sans-serif;
+	margin-top: 30px;
+	font-size: 23px;
+	font-weight: 700;
+	color: #000;
+}
+ .inner .info p
+{
+	font-size: 15px;
+	font-weight: 400;
+	text-align: justify;
+	margin: 20px auto;
+	font-family: 'Montserrat', sans-serif;;
+}
+ .inner .info button
+{
+	border: none;
+	outline: none;
+	width: 120px;
+	height: 40px;
+	background-color: #cd0a2d;
+	border-radius: 40px;
+	color: #fff;
+	font-weight: 600;
+	font-size: 16px;
+	transition: .4s ease;
+}
+.inner .info button:hover
+{
+	background-color: transparent;
+	border: 2px solid #cd0a2d;
+	color: #000;
+}
+/* ---------------------- END  TOUR ----------------------  */
+
+
+/* ---------------------- START ABOUT ----------------------  */
+#about
+{
+	font-family: 'Rajdhani', sans-serif;
+	margin-bottom: 150px;
+}
+#about .left-inner
+{
+	background-color: #cd0a2d;
+	position: relative;
+	padding: 50px;
+}
+#about .left-inner .bike
+{
+	position: absolute;
+	right: -150px;
+	top: -75px;
+	z-index: 999;
+	max-height: 770px;
+}
+#about .left-inner .bike img
+{
+	width: 90%;
+	display: block;
+	object-fit: cover;
+	object-position: center;
+}
+#about .left-inner h1
+{
+	color: #fff;
+	font-weight: 700;
+}
+#about .left-inner .list
+{
+	max-width: 390px;
+	margin: 20px auto;
+
+}
+#about .left-inner .list h4
+{
+	font-size: 26px;
+	font-weight: 500;
+	color: #fff;
+}
+#about .left-inner .list p
+{
+	font-size: 15px;
+	font-weight: 400;
+	color: #c2c2c2;
+	text-align: justify;
+}
+#about .right-inner 
+{
+	margin-top: 45px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#about .right-inner .profile
+{
+	display: flex;
+	flex-direction: row;
+	margin: 25px auto;
+
+}
+#about .right-inner .profile .img
+{
+	max-width: 120px;
+	max-height: 120px;
+	overflow: hidden;
+	border: 2px solid #dcdcdc;
+	border-radius: 50%;
+
+}
+#about .right-inner .profile .img img
+{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+#about .right-inner .profile .decription
+{
+	max-width: 350px;
+}
+#about .right-inner .profile h1
+{
+	color: #5e5e5e;
+	font-size: 35px;
+	font-weight: 700;
+	display: inline-block;
+}
+#about .right-inner .profile h6
+{
+	display: inline-block;
+	color: #5e5e5e;
+	font-size: 25px;
+	font-weight: 600;
+}
+#about .right-inner .profile p
+{
+	color: #040404;
+	font-size: 15px;
+	text-align: justify;
+}
+/* ---------------------- END ABOUT ----------------------  */
+
+/* ---------------------- START CLIENT ----------------------  */
+.section-title h1
+{
+	font-size: 50px;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+.section-title p
+{
+	max-width: 780px;
+	font-size: 15px;
+	color: #5d5c5c;
+	margin: auto;
+}
+#client
+{
+	font-family: 'Rajdhani', sans-serif;
+}
+#client .info
+{
+
+	background-color: #fff;
+	padding: 40px;
+	padding-bottom: 105px;
+}
+
+#client .info .prof .name h2
+{
+	font-weight: 700;
+	font-size: 22px;
+	color: #212121;
+}
+#client .info .prof .name p
+{
+	color: 16px;
+	color: #212121;
+	margin-top: -10px;
+	text-align: center;
+}
+#client .info .prof .img img
+{
+	width: 100%;
+    display: block;
+    border-radius: 50%;
+}
+#client .info .about-biker p
+{
+	text-align: justify;
+	color: #212121;
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;;
+}
+/* ---------------------- END CLIENT ----------------------  */
+
+/* ---------------------- START FEATURES ----------------------  */
+#features
+{
+	background-image: url(../images/cover.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	font-family: 'Rajdhani', sans-serif;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#features::after
+{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 50%;
+	height: 50%;
+	background: #cd0a2d;
+	z-index: 0;
+}
+#features .img
+{
+	max-width: 340px;
+	margin: auto;
+	z-index: 9999999;
+}
+#features .img img
+{
+	width: 100%;
+	display: block;
+
+}
+#features .section-title h1
+{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 55px;
+	font-weight: 700;
+}
+#features .section-title p
+{
+	color: #fff;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: 'Montserrat', sans-serif;;
+}
+#features .content .left
+{
+	color: #fff;
+	margin-right: 15px;
+	z-index: 999999999;
+}
+#features .content .left .box h1
+{
+	font-size: 30px;
+	font-weight: 700;
+}
+#features .content .left .box p
+{
+	margin-top: -10px;
+	font-weight: 500;
+	font-size: 16px;
+}
+#features .content .left  .text p
+{
+	font-size: 15px;
+	font-weight: 400;
+	color: #fff;
+	text-align: center;
+}
+#features .content .left .b2 h1
+{
+	font-weight: 900;
+	font-size: 50px;
+}
+#features .content .left .b2 p
+{
+	font-size: 25px;
+	font-weight: 700;
+}
+/* ---------------------- END FEATURES ----------------------  */
+
+/* ---------------------- START BLOG ----------------------  */
+#blog
+{
+	font-family: 'Rajdhani', sans-serif;
+	padding: 15px;
+}
+#blog  .inner .img .price h1
+{
+	position: absolute;
+	left: 25px;
+	bottom: 49px;
+	color: #fff;
+	font-size: 35px;
+	font-weight: 600;
+}
+/* ---------------------- END  BLOG ----------------------  */
+
+/* ---------------------- START  CONTACT ----------------------  */
+#contact
+{
+	font-family: 'Rajdhani', sans-serif;
+	background-image: url(../images/testimonial.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 20px 15px;
+	position: relative;
+	margin-bottom: 150px;
+}
+#contact .section-title
+{
+	margin: 120px auto;
+	color: #fff;
+}
+#contact .section-title h1
+{
+	font-size: 50px;
+	font-weight: 800;
+
+}
+#contact .section-title p
+{
+	font-size: 20px;
+	font-weight: 500;
+	color: #fff;
+	margin-bottom: 40px;
+}
+#contact .section-title .img
+{
+	position: absolute;
+	left: 50%;
+	bottom: -75px;
+	transform: translate(-50%);
+}
+/* ---------------------- END  CONTACT ----------------------  */
+
+
+/* ---------------------- START  FOOTER ----------------------  */
+footer
+{
+	font-family: 'Rajdhani', sans-serif;
+	padding: 50px 15px;
+	padding-top: 0;
+}
+
+footer .dot .icon .fa
+{
+	color: #262626;
+	margin-right: 25px;
+}
+footer .dot .info h1
+{
+	font-size: 26px;
+	font-weight: 600;
+	color: #262626;
+
+}
+footer .dot .info p
+{
+	font-size: 16px;
+	color: #262626;
+	font-weight: 400;
+}
+footer .social .fa
+{
+	font-size: 30px;
+	border-radius: 50%;
+	border: 2px solid #f0d839;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+	line-height: 70px;
+	transition: .5s ease;
+	cursor: pointer;
+} 
+footer .social .fa:hover
+{
+	border-color: #cd0a2d;
+	color: #cd0a2d;
+
+}
+#copyright
+{
+	background-color: #cd0a2d;
+	min-width: 100%;
+	padding: 20px 15px;
+}
+#copyright .col-12 p
+{
+	font-size: 15px;
+	font-weight: 500;
+	color: #fff;
+}
+/* ---------------------- END  FOOTER ----------------------  */
+
+
+
+/* ---------------------- START  MEDIA ----------------------  */
+@media screen and (max-width: 1700px)
+{
+	#about .left-inner .bike
+{
+	position: absolute;
+	right: -240px;
+	top: 40px;
+	max-height: 770px;
+}
+#about .left-inner .bike img
+{
+	width: 60%;
+	display: block;
+}
+#home .hero h1
+{
+	font-size: 60px;
+}
+}
+@media screen and (max-width: 1200px)
+{
+	header .navbar-brand span
+	{
+		color: #34495e;
+	}
+	#about .right-inner
+	{
+		margin-top: 0;
+		padding-top: 90px;
+	}
+	#about .left-inner
+	{
+		padding-bottom: 140px;
+	}
+	#about .left-inner .bike
+    {
+	position: absolute;
+	right: 50%;
+	top: 100%;
+	transform: rotate(90deg) translate(-50%,-30%);
+	max-height: 770px;
+    }
+#about .left-inner .bike img
+{
+	width: 60%;
+	display: block;
+}
+#features .section-title h1
+{
+	font-size: 40px;
+}
+#features .content .left .b2 h1
+{
+	font-size: 30px;
+}
+}
+
+@media screen and (max-width: 991px)
+{   
+	nav .navbar-collapse 
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	min-height: 100vh;
+	bottom: 0;
+	margin: auto;
+	background-color: rgba(0,0,0, .9);
+	transition: .4s ease;
+}
+
+	#home .hero h1
+	{
+	font-size: 50px;
+	}
+	.inner .img .price
+	{
+	width: 130px;
+    height: 130px;
+	}
+	.inner .img .price p
+	{
+		font-size: 14px;
+	}
+	.inner .img .price h1
+	{
+		font-size: 30px;
+	}
+	#about .left-inner h1
+	{
+		font-size: 30px;
+	}
+	#about .left-inner .list h4
+	{
+		font-size: 17px;
+	}
+	#about .left-inner .list p
+	{
+		font-size: 14px;
+	}
+	#about .left-inner h1
+	{
+		font-size: 18px;
+	}
+	#about .right-inner .profile h1
+	{
+		font-size: 25px;
+	}
+	#about .right-inner .profile p
+	{
+		font-variant-position: 14px;
+	}
+	.section-title h1
+	{
+		font-size: 30px;
+	}
+	.section-title p
+	{
+		font-size: 14px;
+	}
+	#features .section-title h1
+	{
+		font-size: 30px;
+	}
+	#features .section-title p
+	{
+		font-size: 14px;
+	}
+     #features .content .left
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	 #features .content .box
+	 {
+	 	margin: 0!important;
+	 }
+	 #features .img 
+	 {
+	 	display: none;
+	 }
+	 #blog .inner .img .price h1
+	 {
+	 	bottom: 30px;
+	 }
+	 .inner .info h1
+	 {
+	 	font-size: 18px;
+	 }
+	 #features .content .left .text p,
+	 .inner .info p
+	 {
+	 	font-size: 14px;
+	 	padding-left: 20px;
+	 }
+	 #contact .section-title h1
+	 {
+	 	font-size: 30px;
+	 }
+	 #contact .section-title p
+	 {
+	 	font-size: 15px;
+	 }
+	 footer .dot .info h1
+	 {
+	 	font-size: 20px;
+	 }
+	 #contact .section-title .img img
+	 {
+	 	width: 60%;
+        height: 50%;
+	 }
+
+}
+@media screen and (max-width: 576px)
+{
+	#about .right-inner .profile .img
+	{
+		max-width: 80px;
+		max-height: 80px;
+	}
+	#about .right-inner .profile h1
+	{
+		font-size: 22px;
+	}
+	#about .right-inner .profile h6
+	{
+		font-size: 17px;
+	}
+	#client .info .about-biker p
+	{
+		font-size: 14px;
+	}
+	#features .section-title h1
+	{
+		font-size: 20px;
+	}
+	#features .content .left,
+	#features .content .right
+	{
+		margin: 0!important;
+	}
+	#features .content .left .box h1
+	{
+		font-size: 19px;
+	}
+	#features .content .left .b2 p
+	{
+		font-size: 16px;
+	}
+	#contact .section-title .img img
+	{
+		width: 60%;
+		height: 50%;
+
+	}
+	#contact .section-title .img 
+	{
+		left: 60%;
+	}
+	footer .dot .icon .fa
+	{
+		font-size: 35px;
+	}
+	#about .left-inner .bike
+	{
+		right: 45%;
+	}
+}
+
+
+
+@media screen and (max-height: 700px)
+{
+	#home .hero h1
+	{
+		font-size: 25px;
+	}
+	#home .hero .img 
+	{
+		transform: translateX(90px);
+	}
+	#home .hero .img img
+	{
+		width: 60%;
+	}
+}
+
+@media screen and (max-height: 390px)
+{
+	#home .hero h1
+	{
+		display: none;
+	}
+	#home .hero .img 
+	{
+		transform: translateX(170px);
+	}
+	#home .hero .img img
+	{
+		width: 40%;
+	}
+}
+
+/* ---------------------- END  MEDIA ----------------------  */

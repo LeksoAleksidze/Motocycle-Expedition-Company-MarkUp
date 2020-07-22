@@ -1,0 +1,15 @@
+
+@font-face {
+    font-family: 'Billy-Ohio';
+    src:url('../fonts/Billy-Ohio.ttf.woff') format('woff'),
+        url('../fonts/Billy-Ohio.ttf.svg#Billy-Ohio') format('svg'),
+        url('../fonts/Billy-Ohio.ttf.eot'),
+        url('../fonts/Billy-Ohio.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
