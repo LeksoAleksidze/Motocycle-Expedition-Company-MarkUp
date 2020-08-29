@@ -20,7 +20,11 @@ span
 {
 	color: #cd0a2d;
 }
-
+body.noscroll
+{
+	overflow: hidden;
+	position: fixed;
+}
 /* ---------------------- START HEADER ----------------------  */
 header
 {
@@ -31,6 +35,29 @@ header
 	z-index: 9999;
 	margin:auto;
 	padding: 10px;
+}
+header.sticky
+{
+	z-index: 999999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 90px;
+	background-color: #cd0a2d;
+	animation:  scrollAnim .4s ease-in-out;
+	border-bottom: 5px solid #000;
+}
+@keyframes scrollAnim
+{
+	0%{
+		opacity: 0;
+		transform: translateY(-60px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
 header .navbar-brand
 {
@@ -94,19 +121,56 @@ nav .fa
 }
 nav .navbar-toggler
 {
-	background-color: #fff;
-	color: #fff;
-	z-index: 99999;
-	height: 40px;
-	width: 40px;
-	position: fixed;
-	top: 25px;
-	right: 25px;
+	display: none!important;
 }
 
-
-
-
+ header .hum
+ {
+ 	width: 35px;
+ 	height: 30px;
+ 	position: absolute;
+ 	right: 20px;
+ 	top: 30px;
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-around;
+ 	cursor: pointer;
+  	z-index: 99999;
+ }
+  header .hum .line
+  {
+  	width: 100%;
+  	height: 3px;
+  	background-color: #000;
+  	transition: all .4s ease-in-out;
+  }
+  .change  .hum .line-2
+  {
+  	opacity: 0;
+  }
+  .change .hum .line-1
+  {
+  	background-color: #fff!important;
+  	transform: rotateZ(-45deg) translate(-8px, 6px);
+  	animation: fullLine .4s linear; 
+  }
+  .change   .hum .line-3
+  {
+    background-color: #fff!important;
+  	transform: rotateZ(45deg) translate(-8px, -6px);
+    animation: fullLine .4s linear;
+  }
+  @keyframes fullLine
+  {
+  	0%{
+  		width: 0;
+  		opacity: 0;
+  	}
+  	100%{
+  		width: 100%;
+  		opacity: 1;
+  	}
+  }
 /* ---------------------- END  HEADER ----------------------  */
 
 /* ---------------------- START HOME ----------------------  */
@@ -574,6 +638,9 @@ footer
 
 footer .dot .icon .fa
 {
+	width: 50px;
+	height: 40px;
+	text-align: center;
 	color: #262626;
 	margin-right: 25px;
 }
@@ -683,10 +750,17 @@ footer .social .fa:hover
 	font-size: 30px;
 }
 }
-
+@media screen and ( min-width: 991px)
+{
+	header .hum
+	{
+		display: none!important;
+	}
+}
 @media screen and (max-width: 991px)
 {   
-	nav .navbar-collapse 
+
+ .change nav .navbar-collapse 
 {
 	display: flex;
 	flex-direction: column;
@@ -700,7 +774,22 @@ footer .social .fa:hover
 	bottom: 0;
 	margin: auto;
 	background-color: rgba(0,0,0, .9);
-	transition: .4s ease;
+	animation: showMenu .4s ease-in-out;
+}
+@keyframes showMenu
+{
+	0%{
+		opacity: 0;
+		transform: translateX(100px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+nav .navbar-nav .nav-item .nav-link
+{
+	margin-bottom: 15px;
 }
 
 	#home .hero h1
